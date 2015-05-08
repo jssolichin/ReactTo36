@@ -107,7 +107,7 @@
    </AnalyzeAction>
    <ArchiveAction
       buildConfiguration = "Release"
-      customArchiveName = "ReactTo36-beta-noad-wback"
+      customArchiveName = "ReactTo36-beta-noad-wback-restartLast"
       revealArchiveInOrganizer = "YES">
    </ArchiveAction>
 </Scheme>

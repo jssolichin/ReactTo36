@@ -27,10 +27,10 @@ var LargeView = React.createClass({
 	mixins: [TimerMixin],
 	getInitialState: function (){
 		return {
-			pageNo: this.props.pageNo || 1,
 			isNotRead: true,
 			isReadable: false,
 			timeout: this.setTimeout(this._setReadable, readableTimeout),
+			pageNo: 1,
 		}
 	},
 	componentDidMount: function (){
@@ -42,6 +42,18 @@ var LargeView = React.createClass({
 					this.setState({isNotRead: value === 'true' });
 			})
 			.done();
+
+		if(this.props.pageNo == undefined){
+			AsyncStorage.getItem(STORAGE_KEY+'LastRead')
+				.then((value) => {
+					if (value !== null )
+						this.setState({pageNo: parseInt(value)});
+				})
+				.done();
+		}
+		else {
+			this.setState({pageNo: parseInt(this.props.pageNo)});
+		}
 
 	},
 	componentWillReceiveProps: function (){
@@ -84,6 +96,9 @@ var LargeView = React.createClass({
 				if (value !== null)
 					this.setState({isNotRead: value === 'true' });
 			})
+			.done();
+
+		AsyncStorage.setItem(STORAGE_KEY+'LastRead', ''+this.state.pageNo)
 			.done();
 	},
 	_changePage: function (event){
@@ -166,7 +181,7 @@ var LargeView = React.createClass({
 					onMomentumScrollEnd={this._changePage}
 				>
 					{this.props.questions.map((question,index) =>
-						<TouchableOpacity onPress={this._advancePage}>
+						<TouchableOpacity key={index} onPress={this._advancePage}>
 						<View>
 						<Question
 							text={question}

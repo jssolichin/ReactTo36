@@ -35,10 +35,11 @@ var AllQuestions = React.createClass({
 	},
 	_onPress: function (index){
 		var i = index || 1;
-		this.props.navigator.push({
+		this.props.navigator.replacePrevious({
 			id: undefined,
 			pageNo: i
 		});
+		this.props.navigator.pop();
 	},
 	render() {
 		return (

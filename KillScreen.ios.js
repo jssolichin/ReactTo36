@@ -68,6 +68,7 @@ var ResetButton = React.createClass({
 	_onPress: function (){
 		this.props.editTotalRead().reset();
 		this.props.navigator.push({
+			pageNo: 1
 		});
 	},
 	render: function (){
