@@ -9,7 +9,7 @@ A [React Native](facebook/react-native) iOS app that presents the 36 questions t
 # Description
 Are you ready to fall (deeper) in love?
 
-Based on a published [study](http://www.nytimes.com/2015/01/11/fashion/modern-love-to-fall-in-love-with-anyone-do-this.html) and popularized by a New York Times [article](http://psp.sagepub.com/content/23/4/363.full.pdf+html ), the 36 questions presented in this app are designed to help two partners create a stronger bond through mutual, increasingly intimate, disclosure.
+Based on a published [study](http://psp.sagepub.com/content/23/4/363.full.pdf+html) and popularized by a New York Times [article](http://www.nytimes.com/2015/01/11/fashion/modern-love-to-fall-in-love-with-anyone-do-this.html), the 36 questions presented in this app are designed to help two partners create a stronger bond through mutual, increasingly intimate, disclosure.
 
 In order to facilitate long and deep conversations, the app does not have any timer, but rather tracks your progress based on questions answered. Furthermore, by allowing you to see a list of all the questions and see the ones you have done (unique feature), you can quickly get back to meaningful conversations at a later time. 
 
