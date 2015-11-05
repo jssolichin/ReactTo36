@@ -178,6 +178,7 @@ var LargeView = React.createClass({
 					horizontal={true}
 					pagingEnabled={true}
 					showsHorizontalScrollIndicator={false}
+					showsVerticalScrollIndicator={false}
 					onMomentumScrollEnd={this._changePage}
 				>
 					{this.props.questions.map((question,index) =>

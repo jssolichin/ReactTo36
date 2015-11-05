@@ -26,7 +26,7 @@
   //
   // To run on device, change `localhost` to the IP address of your computer, and make sure your computer and
   // iOS device are on the same Wi-Fi network.
-   jsCodeLocation = [NSURL URLWithString:@"http://localhost:8081/index.ios.bundle"];
+   //jsCodeLocation = [NSURL URLWithString:@"http://localhost:8081/index.ios.bundle"];
   //   jsCodeLocation = [NSURL URLWithString:@"http://192.168.1.10:8081/index.ios.bundle"];
 
   // OPTION 2
@@ -35,7 +35,7 @@
   // $ curl 'http://localhost:8081/index.ios.bundle?dev=false&minify=true' -o iOS/main.jsbundle
   //
   // and uncomment the next following line
-  // jsCodeLocation = [[NSBundle mainBundle] URLForResource:@"main" withExtension:@"jsbundle"];
+   jsCodeLocation = [[NSBundle mainBundle] URLForResource:@"main" withExtension:@"jsbundle"];
 
   RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation
                                                       moduleName:@"ReactTo36"
